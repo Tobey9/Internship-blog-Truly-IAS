@@ -21,7 +21,7 @@ export default function EditPostPage() {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
   // Fetch the post by slug
   useEffect(() => {

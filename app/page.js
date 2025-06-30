@@ -4,7 +4,7 @@ import Subscribe from "@/components/Subscribe";
 import Link from "next/link";
 import SafeHTML from "@/components/SafeHTML";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const dynamic = "force-dynamic";
 

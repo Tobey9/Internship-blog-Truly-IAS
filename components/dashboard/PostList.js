@@ -4,7 +4,7 @@ import styles from "./postList.module.css"; // optional for styling
 import Link from "next/link";
 import Image from "next/image";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function PostList({ posts, setPosts }) {
   const handleDelete = async (slug) => {

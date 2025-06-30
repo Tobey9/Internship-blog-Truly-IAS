@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import style from "./LeftSide.module.css";
 import Link from "next/link";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function DashboardLeft() {
   const router = useRouter();
