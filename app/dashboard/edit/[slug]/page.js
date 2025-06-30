@@ -1,5 +1,7 @@
 "use client";
 
+import dynamic from "next/dynamic";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
@@ -38,7 +40,7 @@ export default function EditPostPage() {
     }
 
     fetchPost();
-  }, [slug]);
+  }, [slug, baseURL]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
