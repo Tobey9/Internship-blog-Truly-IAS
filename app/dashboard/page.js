@@ -13,7 +13,9 @@ export default function DashboardPage() {
 
   const fetchPosts = async () => {
     try {
-      const res = await fetch("/api/posts", { cache: "no-store" });
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
+        cache: "no-store",
+      });
       if (!res.ok) throw new Error("Failed to fetch posts");
       const data = await res.json();
       setPosts(data);

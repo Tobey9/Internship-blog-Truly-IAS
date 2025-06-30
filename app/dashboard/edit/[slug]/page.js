@@ -25,7 +25,9 @@ export default function EditPostPage() {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const res = await fetch(`/api/posts/${slug}`);
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${slug}`
+        );
         const data = await res.json();
         setTitle(data.title);
         setImage(data.image || "");
@@ -43,11 +45,14 @@ export default function EditPostPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`/api/posts/${slug}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, image, content }),
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${slug}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, image, content }),
+      }
+    );
 
     if (res.ok) {
       alert("Post updated!");

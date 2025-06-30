@@ -9,9 +9,12 @@ export default function PostList({ posts, setPosts }) {
     const confirmed = confirm("Are you sure you want to delete this post?");
     if (!confirmed) return;
 
-    const res = await fetch(`/api/posts/${slug}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${slug}`,
+      {
+        method: "DELETE",
+      }
+    );
 
     if (res.ok) {
       setPosts(posts.filter((post) => post.slug !== slug));

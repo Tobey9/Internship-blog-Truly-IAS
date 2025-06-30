@@ -13,7 +13,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    const res = await fetch("/api/login", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/login`, {
       method: "POST",
       body: JSON.stringify({ username, password }),
     });
