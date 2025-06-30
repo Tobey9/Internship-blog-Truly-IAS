@@ -42,6 +42,11 @@ Sanitization: dompurify, html-to-draftjs, and draftjs-to-html
 🚫 Responsiveness
 This project is currently not responsive and is optimized for desktop viewing only. Mobile layout and responsiveness have not been implemented
 
-## Deployment Note
+⚠️ Deployment Notes
+MongoDB Atlas Connection:
+This project requires a live MongoDB Atlas connection. To allow the deployed app (e.g., on Vercel) to connect to the database, you must temporarily whitelist all IP addresses using 0.0.0.0/0 in your MongoDB Atlas Network Access settings.
 
-⚠️ For demonstration purposes, the MongoDB Atlas database is temporarily open to all IPs (`0.0.0.0/0`) to allow Vercel serverless functions to connect. This is **not recommended** for production due to security concerns. In a production environment, it's best to use IP whitelisting, VPC peering, or a serverless-compatible database like Supabase or Planetscale.
+Warning: This is not secure for production. Always restrict access to trusted IPs only.
+
+Post Content Limitation:
+Currently, only the first paragraph of post content is displayed on the post listing page (/). Additional content beyond the first paragraph does not render. This can be improved in future iterations to support full content previews or markdown parsing.
