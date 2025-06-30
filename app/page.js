@@ -6,10 +6,12 @@ import SafeHTML from "@/components/SafeHTML";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
+export const dynamic = "force-dynamic";
+
 async function getPosts() {
   try {
     const res = await fetch(`${baseURL}/api/posts`, {
-      cache: "no-store",
+      next: { revalidate: 0 },
     });
 
     if (!res.ok) {
