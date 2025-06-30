@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import style from "./page.module.css";
 
-import dynamic from "next/dynamic";
-
 const TextEditor = dynamic(() => import("@/components/TextEditor"), {
   ssr: false,
 });
