@@ -4,13 +4,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import SafeHTML from "@/components/SafeHTML";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 async function getPost(slug) {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${slug}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await fetch(`${baseURL}/api/posts/${slug}`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     return null;

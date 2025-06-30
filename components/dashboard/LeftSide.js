@@ -4,11 +4,13 @@ import { useRouter } from "next/navigation";
 import style from "./LeftSide.module.css";
 import Link from "next/link";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 export default function DashboardLeft() {
   const router = useRouter();
 
   const handleLogout = async () => {
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/logout`, {
+    await fetch(`${baseURL}/api/logout`, {
       method: "POST",
     });
 

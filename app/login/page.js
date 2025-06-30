@@ -9,11 +9,13 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
   async function handleSubmit(e) {
     e.preventDefault();
     setError("");
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/login`, {
+    const res = await fetch(`${baseURL}/api/login`, {
       method: "POST",
       body: JSON.stringify({ username, password }),
     });

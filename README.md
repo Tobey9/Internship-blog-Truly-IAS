@@ -38,3 +38,6 @@ Authentication: JWT + HTTP-only cookies
 Deployment: Vercel
 
 Sanitization: dompurify, html-to-draftjs, and draftjs-to-html
+
+🚫 Responsiveness
+This project is currently not responsive and is optimized for desktop viewing only. Mobile layout and responsiveness have not been implemented

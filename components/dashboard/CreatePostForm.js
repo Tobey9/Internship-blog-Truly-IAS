@@ -6,6 +6,8 @@ import dynamic from "next/dynamic";
 import styles from "./createPostForm.module.css";
 import TextEditor from "../TextEditor";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 export default function CreatePost({ onPostCreated }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -14,7 +16,7 @@ export default function CreatePost({ onPostCreated }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/api/posts", {
+    const res = await fetch(`${baseURL}/api/posts`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, content, image }),

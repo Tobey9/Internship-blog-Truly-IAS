@@ -4,9 +4,11 @@ import Subscribe from "@/components/Subscribe";
 import Link from "next/link";
 import SafeHTML from "@/components/SafeHTML";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 async function getPosts() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
+    const res = await fetch(`${baseURL}/api/posts`, {
       cache: "no-store",
     });
 
