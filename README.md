@@ -41,3 +41,7 @@ Sanitization: dompurify, html-to-draftjs, and draftjs-to-html
 
 🚫 Responsiveness
 This project is currently not responsive and is optimized for desktop viewing only. Mobile layout and responsiveness have not been implemented
+
+## Deployment Note
+
+⚠️ For demonstration purposes, the MongoDB Atlas database is temporarily open to all IPs (`0.0.0.0/0`) to allow Vercel serverless functions to connect. This is **not recommended** for production due to security concerns. In a production environment, it's best to use IP whitelisting, VPC peering, or a serverless-compatible database like Supabase or Planetscale.
