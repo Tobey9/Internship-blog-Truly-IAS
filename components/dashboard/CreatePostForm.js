@@ -4,7 +4,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 
 import styles from "./createPostForm.module.css";
-import TextEditor from "../TextEditor";
+const TextEditor = dynamic(() => import("../TextEditor"), { ssr: false });
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
