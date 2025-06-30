@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px; /* optional spacing between posts and sidebar */
+  padding: 40px 60px;
+}
+
+.post {
+  flex: 1;
+}
+
+.post h1 {
+  margin-bottom: 50px;
+}
+
+.post .content {
+  line-height: 2rem;
+  margin: 30px 0;
+  font-size: 20px;
+}

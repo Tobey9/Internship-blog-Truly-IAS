@@ -1,0 +1,28 @@
+.right {
+  width: 300px;
+  border-left: 2px solid #ced4da;
+  padding-left: 20px;
+}
+
+.right h2 {
+  margin-bottom: 15px;
+}
+
+.right p {
+  margin-bottom: 20px;
+}
+
+.right input {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.notifButton {
+  font-size: 1rem;
+  font-family: inherit;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #0b7285;
+}

@@ -1,0 +1,40 @@
+.editPost {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically center */
+  min-height: 100vh; /* full viewport height */
+  width: 100%; /* use full screen width */
+  background-color: #f9f9f9; /* optional background */
+}
+
+.editPost h2 {
+  margin-bottom: 20px;
+}
+
+.editPost form {
+  width: 600px;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.editPost input {
+  display: block;
+  padding: 15px 10px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.editPost input:last-of-type {
+  margin-bottom: 20px;
+}
+
+.editPost button {
+  margin: 20px 0;
+  padding: 15px 10px;
+  background-color: #0b7285;
+  font-family: inherit;
+  border: none;
+  border-radius: 20px;
+}

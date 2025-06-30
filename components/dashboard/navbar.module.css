@@ -1,0 +1,29 @@
+.navbar {
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #0b7285;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f3fdff;
+}
+
+.left {
+  padding-left: 15px;
+}
+
+.right {
+  padding-right: 15px;
+}
+
+.right .icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.right .icon:last-of-type {
+  font-size: 1.9rem;
+}

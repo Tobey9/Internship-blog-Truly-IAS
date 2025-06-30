@@ -1,0 +1,50 @@
+.textEditor {
+  width: 500px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: white;
+}
+
+/* Ensure editor text area has height and padding */
+.editor {
+  min-height: 200px;
+  padding: 12px;
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Wrapper can be left as-is or padded */
+.wrapper {
+  padding: 8px;
+  background-color: white;
+}
+
+/* Toolbar styling */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  padding: 6px;
+  background-color: #f9f9f9;
+}
+
+/* Force toolbar buttons inline */
+.textEditor :global(.rdw-inline-wrapper),
+.textEditor :global(.rdw-block-wrapper),
+.textEditor :global(.rdw-fontsize-wrapper),
+.textEditor :global(.rdw-list-wrapper),
+.textEditor :global(.rdw-text-align-wrapper),
+.textEditor :global(.rdw-link-wrapper),
+.textEditor :global(.rdw-emoji-wrapper),
+.textEditor :global(.rdw-image-wrapper) {
+  display: flex !important;
+  align-items: center;
+  margin-right: 12px;
+}
+
+/* Optional: spacing between buttons */
+.textEditor :global(.rdw-option-wrapper) {
+  margin: 0 4px;
+}

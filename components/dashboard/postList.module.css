@@ -1,0 +1,40 @@
+.postList {
+  padding: 100px 30px;
+  width: 300px;
+}
+
+.postList h2 {
+  margin-bottom: 18px;
+}
+
+.item {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.item a {
+  text-decoration: none;
+  color: #505355;
+}
+
+.item .actions {
+  display: flex;
+  margin-top: 5px;
+}
+
+.item .actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.item .actions button:first-of-type {
+  margin-right: 10px;
+  background-color: #0b7285;
+}
+
+.item .actions button:nth-of-type(2) {
+  background-color: #f03e3e;
+}
